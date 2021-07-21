@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PalmPaste - Simple text sharing platform</title>
+</head>
+<body>
+<style>
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		body {
+			color: #abb2bf;
+		  	background: #282c34;
+		  	outline: none;
+		  	font-family: sans-serif;
+			
+		}
+
+		.actionbar {
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			box-shadow: rgba(149, 157, 165, 0.2) 0px 2px 5px; 
+			border-radius: 2px;
+			background: rgba(52, 48, 40, 0.4);
+			display: flex;
+			flex-direction: column;
+			padding: 5px 10px 5px 10px;
+			height: 100px;
+			width: 15%;
+		}
+
+		.codebox button, input {
+			height: 20px;
+			margin-top: 20px;
+			width: 50px;
+			background-color: transparent;
+			color: #abb2bf;
+			border: 1px solid #abb2bf;
+			border-radius: 2px;
+			cursor: pointer;
+		}
+
+		.codebox button:hover, input:hover {
+			color: #e7e9ec;
+			border: 1px solid #e7e9ec;
+		}
+
+		.codebox {
+			border: none;
+		  	width: 90%;
+		  	margin-left: 20px;
+		  	height: 97vh;
+		  	color: white;
+		  	background: #282c34;
+		  	outline: none;
+		  	display: block;
+		  	resize: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		h1 {
+			color: #abb2bf;
+			font-family: consolas;
+			margin-bottom: 10px;
+		}
+
+		h1:hover {
+			color: white;
+		}
+
+		.linearrow {
+			position: absolute;
+			float: left;
+		}
+
+
+</style>
+
+<div class="container" style="padding: 10px 10px 10px 10px;">
+<form action="/create" autocomplete="false" method="POST">
+
+		<div class="actionbar">
+			<a href="localhost:4567/"><h1>PalmPaste</h1></a>
+			<input type="submit" value="Save" />
+		</div>
+		<div class="linearrow">
+			>
+		</div>
+		<textarea class="codebox" spellcheck="false" name="content" placeholder="Enter text here" autofocus="autofocus">{CONTENT}</textarea>
+</form>
+</div>
+
+</body>
+</html>
